@@ -1,0 +1,28 @@
+.card{
+    transition: all;
+    transition-duration: 400ms;
+}
+.card:hover{
+    box-shadow: 2px 2px 8px 1px rgb(209, 206, 206),-2px -2px 8px 1px rgb(209, 206, 206);
+}
+
+.img-circle{
+    transition: all;
+    transition-duration: 400ms;
+}
+
+.card:hover .img-circle{
+    /* background-color: rgb(98, 174, 200); */
+    background: linear-gradient(rgb(98, 174, 200),#B7E9F7);
+}
+
+.feature2{
+    background-position: -400px 0;
+    background-size: 200% 100%;
+}
+
+.core-feature-section{
+    background-size: 100% 100%;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
