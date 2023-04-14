@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+        
+    <div class="wrapper">
+        <div class="upper-container">
+            <div class="container">
+                <h1>WEATHER APP</h1>
+                <div class="items">
+                    <button class="your-weather">Your Weather</button>
+                    <button class="search-weather">Search Weather</button>
+                </div>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Search for City..." class="input-tag">
+                <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+            <div class="container-2">
+                <h2 class="location"></h2>
+                <p class="condition">Invalid</p>
+                <h1 class="temp">0000 °C</h1>
+                <div class="items-2">
+                    <div class="box">
+                        <i class="fa-solid fa-wind"></i>
+                        <p>WIND SPEED</p>
+                        <p id="wind-speed"></p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>HUMIDITY</p>
+                        <p id="humidity"></p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-cloud"></i>
+                        <p >CLOUDS</p>
+                        <p id="clouds"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/aa9c4a3584.js" crossorigin="anonymous"></script>
+</body>
+</html>
