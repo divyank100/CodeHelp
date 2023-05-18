@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
 import { Item } from './Item';
+import { Empty } from './Empty';
 
 
 export const Todo = () => {
 
     const[task,setTask]=useState([]);
     const[inputValue,setInputValue]=useState('');
+    const[date,setDate]=useState(new Date());
 
     function deleteItem(index){
+        console.log("Delete");
         const updatedTask=[...task];
+        updatedTask.splice(index,1);
+        setTask(updatedTask);
         console.log(updatedTask);
-        // updatedTask.splice(index,1);
-        // setTask(updatedTask);
     }
 
     function clickHandler(){
         if(inputValue!==''){
             task.push(inputValue);
             setTask(task);
+            setDate(new Date().toLocaleTimeString());
         }
         console.log(task);
         setInputValue('');
@@ -38,7 +42,7 @@ return (
             </div>
         
         {
-            task.map((item,index)=> <Item key={index} title={task[index]} deleteItem={deleteItem(index)}></Item>)
+            task.length==0 ? <Empty></Empty> : (task.map((item,index)=> <Item  key={index} id={index} title={task[index]} deleteItem={deleteItem} date={date}></Item>))
         }
         
     </div>
